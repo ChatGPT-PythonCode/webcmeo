@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EOWebcomic</title>
+  <title>EO Webcomic</title>
   <meta name="description" content="A webcomic." />
-  <meta property="og:title" content="My Webcomic" />
+  <meta property="og:title" content="EO Webcomic" />
   <meta property="og:description" content="Read the latest comic." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -18,14 +18,16 @@
         <p id="siteTagline">by EOGuides.com</p>
       </div>
       <nav class="nav">
-        <button type="button" data-tab="latest" aria-current="page">Latest</button>
-        <button type="button" data-tab="archive" aria-current="false">Archive</button>
+        <!-- Archive is the default active tab -->
+        <button type="button" data-tab="latest" aria-current="false">Latest</button>
+        <button type="button" data-tab="archive" aria-current="page">Archive</button>
         <button type="button" data-tab="about" aria-current="false">About</button>
       </nav>
     </header>
 
     <main class="main">
-      <section class="card" data-panel="latest">
+      <!-- Latest is hidden by default -->
+      <section class="card" data-panel="latest" style="display:none">
         <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap">
           <h2 style="margin:0">Latest</h2>
           <span class="muted small" id="latestDate"></span>
@@ -39,7 +41,8 @@
         </div>
       </section>
 
-      <section class="card" data-panel="archive" style="display:none">
+      <!-- Archive is shown by default -->
+      <section class="card" data-panel="archive">
         <h2>Archive</h2>
         <p class="muted small">Click a comic to open the reader.</p>
         <div class="grid" id="archiveGrid"></div>
@@ -49,8 +52,7 @@
         <h2>About</h2>
         <p class="muted">Edit this section in <code>index.html</code>.</p>
         <p>
-          Contact: <a href="mailto:you@example.com">you@example.com</a><br />
-          Social: <a href="#">@yourhandle</a>
+          Contact: <a href="mailto:you@example.com">you@example.com</a>
         </p>
         <p class="muted small">
           Tip: You can deep-link to a comic with <code>#c=001</code> (example: <code>.../index.html#c=001</code>).
@@ -61,7 +63,7 @@
     </main>
 
     <footer class="footer">
-      © <span id="siteTitle">My Webcomic</span>
+      © <span id="siteTitle">EO Webcomic</span>
     </footer>
   </div>
 
